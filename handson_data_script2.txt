@@ -1,11 +1,11 @@
 select
-  int(double(NY.CNT)/double(ALL.CNT)*100) "New YorkæÔ—¦",
-  NY.CNT "New YorkæÔŒ”",
-  ALL.CNT "‘S‘ÌæÔŒ”"
+  int(double(NY.CNT)/double(ALL.CNT)*100) "New Yorkä¹—è»Šç‡",
+  NY.CNT "New Yorkä¹—è»Šä»¶æ•°",
+  ALL.CNT "å…¨ä½“ä¹—è»Šä»¶æ•°"
 FROM
   (select count(*) cnt from nyctaxi) ALL,
   (select count(*) cnt
-from usmap u, nyctaxi t 
+from USAMP u, nyctaxi t 
 where 
   u.name_2 = 'New York' and
   db2gse.st_contains(
