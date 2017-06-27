@@ -5,7 +5,7 @@ select
 FROM
   (select count(*) cnt from nyctaxi) ALL,
   (select count(*) cnt
-from USAMP u, nyctaxi t 
+from usmap u, nyctaxi t 
 where 
   u.name_2 = 'New York' and
   db2gse.st_contains(
